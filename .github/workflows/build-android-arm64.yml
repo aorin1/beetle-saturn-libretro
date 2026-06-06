@@ -16,8 +16,10 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
         with:
+          repository: libretro/beetle-saturn-libretro
           ref: ${{ github.event.inputs.commit }}
           submodules: recursive
+          fetch-depth: 0
 
       - name: Install Android NDK
         uses: nttld/setup-ndk@v1
